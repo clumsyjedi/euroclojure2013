@@ -115,7 +115,8 @@
 # Lamina: Business Rules Capture #
 * Routes are very nicely captured in succinct clojure blocks
 * has nice integration with graphviz
-* ![Alt text](images/lamina.png)
+
+![Alt text](images/lamina.png)
 * Breaks down a bit with the proliferation of anon functions
 
 # Lamina: Distributed Systems Orchestration #
