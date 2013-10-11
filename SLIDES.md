@@ -1,5 +1,7 @@
 # Introduction #
 
+The voodoo of making systems communicate reliably and predictably using messages.
+
 # Areas of Interest #
 
 * Systems Integration
@@ -71,6 +73,7 @@
 # Apache Camel (HolyGrail) #
 
 * Designed to satisfy the EIPs
+
 # Apache Camel: Systems Integration #
 * Lot's of adaptors
 * It will satisfy most message brokers
@@ -163,8 +166,6 @@
 
 ![Alt text](images/patterns.png)
   
-  <<DIAGRAM>>
-
 # EEP: Distributed Systems orchestration #
 * Message Channel
   * Nope, make your own if you need it
@@ -226,6 +227,7 @@
   * default behaviour is to process un'acked messages again (forever)
 
 # Some Others in brief #
+* 
 
 # Beyond Patterns #
 
