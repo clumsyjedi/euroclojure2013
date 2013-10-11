@@ -15,7 +15,7 @@
 * Powerful languages can render patterns obsolete
 * Hopefully you can follow without having read this
 
-<IMAGE>
+![Alt text](images/eip.png)
 
 # Case Study #
 
@@ -27,11 +27,11 @@
 
 # Component View #
 
-<DIAGRAM>
+![Alt text](images/components.png)
 
 # EIP View #
 
-<DIAGRAM>
+![Alt text](images/patterns.png)
 
 # Pattern Analysis #
 
@@ -158,7 +158,11 @@
 * Because the topologies are built from named constructs (aggregate etc)
 * Because the streams are explicitly named by keywords
 * You can graph the entire topology, not just the path taken by one event
-  <<DIAGRAM>>
+
+![Alt text](images/eep.png)
+
+![Alt text](images/patterns.png)
+  
   <<DIAGRAM>>
 
 # EEP: Distributed Systems orchestration #
