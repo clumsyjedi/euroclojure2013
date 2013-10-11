@@ -40,7 +40,7 @@
                 :page (defobserver
                            (fn [e] (publish activemq "page" (:message e)))))
 
-;; (clojurewerkz.eep.visualization/visualise-graph event-chain)
+ (clojurewerkz.eep.visualization/visualise-graph event-chain)
 
 (defn poll-web-events []
   (notify event-chain :web-event (<!! web/web-input))

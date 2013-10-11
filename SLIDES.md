@@ -17,7 +17,7 @@ The voodoo of making systems communicate reliably and predictably using messages
 * Powerful languages can render patterns obsolete
 * Hopefully you can follow without having read this
 
-![Alt text](images/eip.png)
+![Alt text](images/eip.gif)
 
 # Case Study #
 
@@ -59,8 +59,6 @@ The voodoo of making systems communicate reliably and predictably using messages
   * core.async 
   * pipeseq 
   * pipejine 
-  * Pedestal 
-  * Conduit 
   * ClamQ
 
 ## Mule #
@@ -112,7 +110,9 @@ The voodoo of making systems communicate reliably and predictably using messages
 * Well documented, seems like a strong community
 
 # Lamina: System Integration #
-* You're on your own
+* Aleph, built on top of lamina
+* Provides adaptors based on Lamina channels
+* A bit lightweight right now
 * I've used clamq, compojure and quartzite
 
 # Lamina: Business Rules Capture #
@@ -227,10 +227,31 @@ The voodoo of making systems communicate reliably and predictably using messages
   * default behaviour is to process un'acked messages again (forever)
 
 # Some Others in brief #
-* 
+* Many libraries solving th problem of channels/queues
+  * PipeSeq: Queues for parallel processing of blocking code
+  * Pipejine: In memory pipelining and queues. Similar in scope to lamina.
+  * core.async: Queues for parallel processing of CPU bound code
+    * We're using this in the Storm example to give asynchronous communication of HTTP messages to th storm layer
+  * Clamq: Adaptors for JMS, activemq and othr message brokers. We're using this to for our AMQ operations.
 
 # Beyond Patterns #
+* Most of these projects have eschewed the language of patterns
+* Patterns can be implied in th solutions above
+* Storm gave us a solution that worked without message channels and brokers\
+  * solved a problem 
+* Also gave us what I believe is a superior mechanism to DLQ
+  * But this is subjective
 
 # Conclusions #
 
+* No clear winner
+* Clear winners for different priorities though
+* Lamina is the most well-rounded product here
+* Camel givs the best adaptor support
+* If you need an ESB you will probably need to stick with java
+  * or write your own ;)
+* Storm has by far the best distributed systems orchestration
+  * Does this by breaking out of traditional orchestration paradigms
+* EEP actually gave the best topology visualisation
+  * Not even designed for integration
 
