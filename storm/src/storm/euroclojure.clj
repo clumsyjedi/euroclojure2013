@@ -63,7 +63,6 @@
 
 (defbolt amq-publish ["group-by" "count" ]
   [tuple collector]
-  (println "ENQUEUE" tuple)
   (let [event (json/parse-string (get tuple "event-doc") true)]
     (publish activemq (-> event :assetType lower-case) (get tuple "asset-doc"))
     (emit-bolt! collector tuple :anchor tuple)))
@@ -74,8 +73,7 @@
         count (get tuple "count")]
     (swap! callbacks update-in [(get tuple "group-by")] inc)
     (when (= (get @callbacks uuid) count)
-      (ack! collector tuple)
-      (println "THAT'S A WRAP!!"))))
+      (ack! collector tuple))))
 
 (defn submit-topology [t]
   (.submitTopology (LocalCluster.)
